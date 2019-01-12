@@ -8,6 +8,30 @@ import org.jointheleague.graphical.robot.Robot;
 
 public class _01_RobotRace {
 	//1. make a main method
+	public static void main(String[] args) {
+		Robot[] r = new Robot[5] ;
+	for(int i = 0; i< r.length; i++) {
+	r[i] = new Robot();
+	r[i].moveTo(i * 100 + 50, 550);
+}
+	Random rand = new Random();
+	int random;
+	boolean win = false;
+	while(win == false) {
+	for(int i = 0; i < r.length ; i ++) {
+		random = rand.nextInt(50);
+		r[i].setSpeed(10);
+		r[i].move(random);
+		 
+		if(r[i].getY() <= 70) {
+			win = true;
+		break;
+			
+		}
+	}	
+	}
+	
+	}
 	
 		//2. create an array of 5 robots.
 
@@ -28,3 +52,4 @@ public class _01_RobotRace {
 
 	
 }
+
