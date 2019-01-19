@@ -1,7 +1,7 @@
 /* Copy the code into a new Processing sketch and complete then steps. */
 
 //1. create an array of ints. don't initialize it yet.
-
+int[] i = new Ar
 
 void setup() {
   //2. set the size of your window
@@ -12,7 +12,7 @@ void setup() {
   
   //4. initialize the ints in the array with random numbers
   //   from 0 to the built in height variable
-  
+  asdfasdfasdf 
 
   //5. call the noStroke() method
   
