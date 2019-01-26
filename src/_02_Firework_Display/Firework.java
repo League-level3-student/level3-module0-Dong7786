@@ -1,5 +1,6 @@
 package _02_Firework_Display;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Random;
 
@@ -25,7 +26,7 @@ sparks = new Spark[100];
 		//3. Iterate through the sparks and initialize each one to a new Spark.
 		//   Make each spark start at the middle bottom of the screen.
 	for(int i = 0 ; i < sparks.length ; i ++) {
-		sparks[i] = new Spark(50, 50);
+		sparks[i] = new Spark(1000, 1000);
 		
 		
 	}
@@ -35,8 +36,8 @@ sparks = new Spark[100];
 		//4. Iterate through the sparks and reset their x and y location
 		//   to their original starting point.
 		for(int i = 0; i < sparks.length ; i ++ ) {
-sparks[i].x = 50;
-sparks[i].y = 50;
+sparks[i].x = 1000;
+sparks[i].y = 1000;
 			
 		}
 		
@@ -76,7 +77,11 @@ sparks[i].y = 50;
 	
 	public void drawSparks(Graphics g) {
 		//5. Iterate through each spark
-		
+		for(int i = 0; i < sparks.length ; i ++) {
+			g.setColor(sparks[i].color);
+			g.fillOval(sparks[i].x, sparks[i].y, sparks[i].size, sparks[i].size);
+			
+		}
 			//6. Set the color to the spark's color with g.setColor()
 			//7. Fill in an oval using the spark's x, y, and size with g.fillOval()
 	}
